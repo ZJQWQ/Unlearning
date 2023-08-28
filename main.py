@@ -24,6 +24,8 @@ from thirdparty.repdistiller.helper.loops import train_distill, train_distill_hi
 from thirdparty.repdistiller.helper.pretrain import init
 from thirdparty.repdistiller.helper.util import adjust_learning_rate as sgda_adjust_learning_rate
 
+#################################################################################
+
 def adjust_learning_rate(optimizer, epoch):     # 每隔step_size个epoch，学习率×0.1
     if args.step_size is not None:lr = args.lr * 0.1 ** (epoch//args.step_size)
     else:lr = args.lr
